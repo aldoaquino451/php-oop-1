@@ -20,9 +20,7 @@ Possiamo ad esempio organizzare il codice
 - organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati.
 
 
-## Esercizio
 
-- definiamo la classe Movie con 
 
 
 

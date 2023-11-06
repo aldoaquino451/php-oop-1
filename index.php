@@ -29,8 +29,26 @@ require_once __DIR__ . "./db/db.php";
   <section class="container" id="movies">
     <h1 class="my-3">Movies</h1>
 
-    <div>
-      Cards
+    <div class="row">
+
+      <? foreach ($movies as $movie): ?>
+        <div class="col mb-4">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">
+                <?= $movie->title ?>
+              </h5>
+              <p class="card-text">
+                <?= $movie->vote ?> / 10
+              </p>
+              <p class="card-text">
+                <?= $movie->description ?>
+              </p>
+            </div>
+          </div>
+        </div>
+      <? endforeach; ?>
+
     </div>
 
   </section>
