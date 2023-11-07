@@ -41,11 +41,11 @@ require_once __DIR__ . "/db/db.php";
             <div class="card-body">
 
               <h5 class="card-title">
-                <?= $show->title ?>
+                <?php echo $show->title ?>
               </h5>
 
               <p>
-                <?= $show->getVote() ?> / 10
+                <?php echo $show->getVote() ?> / 10
               </p>
 
               <div>
@@ -54,7 +54,7 @@ require_once __DIR__ . "/db/db.php";
 
                   <? foreach ($show->casts as $cast): ?>
                     <li>
-                      <?= $cast ?>
+                      <?php echo $cast ?>
                     </li>
                   <? endforeach; ?>
 
@@ -63,10 +63,6 @@ require_once __DIR__ . "/db/db.php";
 
               <p>
                 <?php echo $show->published_year ?>
-              </p>
-
-              <p>
-
               </p>
 
             </div>
