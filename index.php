@@ -31,26 +31,38 @@ require_once __DIR__ . "./db/db.php";
 
     <div class="row">
 
-      <? foreach ($movies as $movie): ?>
-        <div class="col mb-4">
-          <div class="card" style="width: 18rem;">
+      <? foreach ($movieList as $movie): ?>
+        <div class="col-6 mb-4">
+          <div class="card">
             <div class="card-body">
+
               <h5 class="card-title">
                 <?= $movie->title ?>
               </h5>
+
               <p class="card-text">
-                <?= $movie->vote ?> / 10
+                <?= $movie->getVote() ?> / 10
               </p>
-              <p class="card-text">
-                <?= $movie->description ?>
-              </p>
+
+              <div class="card-text">
+                <h4>Generi :</h4>
+                <ul>
+
+                  <? foreach ($movie->genres as $genre): ?>
+                    <li>
+                      <?= $genre ?>
+                    </li>
+                  <? endforeach; ?>
+
+                </ul>
+              </div>
+
             </div>
           </div>
         </div>
+
       <? endforeach; ?>
-
     </div>
-
   </section>
 
 </body>
