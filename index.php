@@ -1,9 +1,9 @@
 <?php
 
-require_once __DIR__ . "./Model/Production.php";
-require_once __DIR__ . "./Model/Movie.php";
-require_once __DIR__ . "./Model/TvSerie.php";
-require_once __DIR__ . "./db/db.php";
+require_once __DIR__ . "/Model/Production.php";
+require_once __DIR__ . "/Model/Movie.php";
+require_once __DIR__ . "/Model/TvSerie.php";
+require_once __DIR__ . "/db/db.php";
 
 
 ?>
@@ -35,7 +35,7 @@ require_once __DIR__ . "./db/db.php";
 
     <div class="row">
 
-      <? foreach ($list as $show): ?>
+      <?php foreach ($list as $show): ?>
         <div class="col-6 mb-4">
           <div class="card">
             <div class="card-body">
@@ -62,15 +62,18 @@ require_once __DIR__ . "./db/db.php";
               </div>
 
               <p>
-                <?php echo $show->aired_from_year ?>
-                <?php echo $show->$_running_time ?>
+                <?php echo $show->published_year ?>
+              </p>
+
+              <p>
+
               </p>
 
             </div>
           </div>
         </div>
 
-      <? endforeach; ?>
+      <?php endforeach; ?>
     </div>
   </section>
 
