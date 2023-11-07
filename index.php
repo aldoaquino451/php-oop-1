@@ -28,21 +28,24 @@ require_once __DIR__ . "/db/db.php";
 
 <body class=" bg-danger   ">
 
-  <h1 class="p-3 bg-dark text-light ">PHP Object-oriented programming 1</h1>
+  <h1 class="p-3 bg-dark text-light ">Productions</h1>
 
   <section class="container" id="movies">
-    <h2 class="my-3 py-2 px-5 rounded  bg-opacity-50  bg-warning d-inline-block">Movies</h2>
+    <h2 class="my-4 py-2 px-5 rounded  bg-opacity-50  bg-warning d-inline-block">Movies and TvSeries</h2>
 
     <div class="row">
 
       <?php foreach ($list as $show): ?>
-        <div class="col-6 mb-4">
+        <div class="col-lg-3 col-sm-6 mb-4">
           <div class="card">
-            <div class="card-body">
 
-              <h3 class="card-title">
-                <?php echo $show->title ?>
-              </h3>
+            <img class="card-img-top object-fit-cover " style="height: 250px" src="<?php echo $show->getImage() ?>"
+              alt="">
+            <h3 class="text-light bg-black  bg-opacity-50 p-2   position-absolute" style="left: 10px; top: 180px">
+              <?php echo $show->title ?>
+            </h3>
+
+            <div class="card-body">
 
               <p>
                 Voto:
@@ -85,7 +88,7 @@ require_once __DIR__ . "/db/db.php";
               </div>
 
               <div>
-                <h5>Cast :</h5>
+                <h6 class="mb-1">Cast :</h6>
                 <ul class=" list-group pb-3 ">
 
                   <?php foreach ($show->casts as $cast): ?>
