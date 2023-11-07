@@ -40,30 +40,62 @@ require_once __DIR__ . "/db/db.php";
           <div class="card">
             <div class="card-body">
 
-              <h5 class="card-title">
+              <h3 class="card-title">
                 <?php echo $show->title ?>
-              </h5>
+              </h3>
 
               <p>
+                Voto:
                 <?php echo $show->getVote() ?> / 10
               </p>
 
+              <div class="<?= $show->aired_from_year ?? 'd-none' ?>">
+                <p>
+                  &lbrack;
+                  <?= $show->aired_from_year ?? '' ?> -
+                  <?= $show->aired_to_year ?? '' ?>
+                  &rbrack;
+                </p>
+                <p>
+                  &lbrack;
+                  <strong>
+                    <?php echo $show->number_of_seasons ?? '' ?>
+                  </strong>
+                  Stagioni e
+                  <strong>
+                    <?php echo $show->number_of_episodes ?? '' ?>
+                  </strong>
+                  Episodi
+                  &rbrack;
+                </p>
+              </div>
+
+              <div class="<?= $show->published_year ?? 'd-none' ?>">
+                <p>
+                  &lbrack;
+                  <?php echo $show->published_year ?? '' ?>
+                  &rbrack;
+                </p>
+                <p>
+                  &lbrack;
+                  <?php echo $show->running_time ?? '' ?>
+                  minuti
+                  &rbrack;
+                </p>
+              </div>
+
               <div>
-                <h4>Cast :</h4>
-                <ul>
+                <h5>Cast :</h5>
+                <ul class=" list-group pb-3 ">
 
                   <?php foreach ($show->casts as $cast): ?>
-                    <li>
+                    <li class=" list-unstyled ">
                       <?php echo $cast ?>
                     </li>
                   <?php endforeach; ?>
 
                 </ul>
               </div>
-
-              <p>
-                <?php echo $show->published_year ?>
-              </p>
 
             </div>
           </div>
