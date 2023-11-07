@@ -52,11 +52,11 @@ require_once __DIR__ . "/db/db.php";
                 <h4>Cast :</h4>
                 <ul>
 
-                  <? foreach ($show->casts as $cast): ?>
+                  <?php foreach ($show->casts as $cast): ?>
                     <li>
                       <?php echo $cast ?>
                     </li>
-                  <? endforeach; ?>
+                  <?php endforeach; ?>
 
                 </ul>
               </div>
