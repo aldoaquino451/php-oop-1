@@ -63,7 +63,7 @@ require_once __DIR__ . "./db/db.php";
 
               <p>
                 <?php echo $show->aired_from_year ?>
-                <?php echo $show->aired_to_year ?>
+                <?php echo $show->$_running_time ?>
               </p>
 
             </div>
