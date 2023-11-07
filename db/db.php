@@ -1,25 +1,18 @@
 <?php
 
-$movieList = [
+$list = [
   new Movie(
-    'Bastardi senza gloria',
-    ['guerra', 'drammatico', 'azione'],
-    90
+    "Pulp Fiction",
+    ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
+    89
   ),
-  new Movie(
-    'Bastardi senza gloria',
-    ['guerra'],
-    93
-  ),
-  new Movie(
-    'Kill Bill',
-    ['thirller', 'avventura', 'grottesco'],
-    94
-  ),
-  new Movie(
-    'Le iene',
-    ['gangster', 'noir'],
-    85
+  new TvSerie(
+    "Breaking Bad",
+    ["Bryan Cranston", "Aaron Paul", "Anna Gunn"],
+    95,
+    2008,
+    2013,
+    62,
+    5
   )
 ];
-
