@@ -24,6 +24,8 @@ Per la classe **TvSerie**:
 Creare un array misto di oggetti Movie e TvSerie. Stamparli a schermo in delle cards.     
 Per gestire correttamente le stampe va gestito correttamente il polimorfismo delle classi, ossia la capacità di fare override dei metodi del genitore piuttosto che ereditarli.
 
+Continuare l’esercitazione di ieri aggiungendo al gestione degli errori (minimo uno) con throw Exception  - try/catch e aggiungere un trait (potrebbe essere l’anno di pubblicazione)
+
 
 - classe Production: titolo, genere, voto
 - classe Movie: anno, durata

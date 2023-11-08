@@ -14,4 +14,17 @@ class Movie extends Production
     parent::__construct($_title, $_casts, $_vote, $_image); // parametri del construct genitore
   }
 
+  public function getYear()
+  {
+    return "&lbrack; $this->published_year &rbrack;";
+  }
+  public function getTime()
+  {
+    return
+      "&lbrack;
+        $this->running_time minuti
+      &rbrack;";
+  }
+
+
 }

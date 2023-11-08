@@ -17,4 +17,18 @@ class TvSerie extends Production
 
     parent::__construct($_title, $_casts, $_vote, $_image); // parametri del construct genitore
   }
+
+  public function getYear()
+  {
+    return "&lbrack; $this->aired_from_year -  $this->aired_to_year &rbrack;";
+  }
+
+  public function getTime()
+  {
+    return
+      "&lbrack;
+        <strong>$this->number_of_seasons</strong> Stagioni e 
+        <strong>$this->number_of_episodes</strong> Episodi 
+      &rbrack;";
+  }
 }
