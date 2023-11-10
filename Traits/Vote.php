@@ -6,6 +6,11 @@ trait Vote {
 
   public function getVote()
   {
-    return "Voto : " . $this->vote / 10 . " / 10";
+    if ($this->vote > 0 && $this->vote < 100) {
+      return "Voto : " . $this->vote / 10 . " / 10";
+    } 
+    else {
+      throw new Exception("Il numero deve essere compreso tra 0 e 100");
+    }
   }
 }

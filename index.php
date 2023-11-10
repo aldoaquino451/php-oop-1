@@ -1,14 +1,17 @@
 <?php
-//  TRAITS
+
+try
+{
 require_once __DIR__ . '/Traits/Vote.php';
-// MODEL
 require_once __DIR__ . "/Model/Production.php";
 require_once __DIR__ . "/Model/Movie.php";
 require_once __DIR__ . "/Model/TvSerie.php";
-// DATABASE
 require_once __DIR__ . "/db/db.php";
-
-
+}
+catch (Exception $e) 
+{
+  $error = $e->getMessage() ." e";
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +37,11 @@ require_once __DIR__ . "/db/db.php";
     <h1 class="p-3 bg-dark text-light ">Productions</h1>
 
     <div class="container" id="movies">
+
+      <div class="alert alert-danger" role="alert">
+        <?php echo $error ?>
+      </div>
+
       <h2 class="my-4 py-2 px-5 rounded  bg-opacity-50  bg-warning d-inline-block">Movies and TvSeries</h2>
 
       <div class="row">
@@ -79,6 +87,7 @@ require_once __DIR__ . "/db/db.php";
           </div>
 
         <?php endforeach; ?>
+
       </div>
     </div>
 
